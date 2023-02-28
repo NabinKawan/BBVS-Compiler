@@ -3,6 +3,7 @@ from app.settings import configs
 
 blockchain_settings = configs.blockchain_settings
 
+
 class StatusService:
     def test_ping(self, api_url):
         # Construct the ping command

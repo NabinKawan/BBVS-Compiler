@@ -4,14 +4,9 @@ import py_compile
 class CompilerService:
 
     @staticmethod
-    async def generate_bytecode(file):
-        contents = await file.read()
-        with open('contract.py', 'w') as f:
-            f.write(contents.decode())
-        py_compile.compile('contract.py')
-        return 'Byte code generated'
-        # return py_compile.compile('main.py')
-
-    # @staticmethod
-    # def compile_bytecode(bytecode:str,data_provider:Dict[str,Any]):
-    #     pass
+    async def compile_contract(contract_file, data_file):
+        contract_contents = await contract_file.read()
+        data_contents = await data_file.read()
+        data = data_contents.decode()
+        byte_code = compile(contract_contents.decode(), 'filename', 'exec').co_code
+        return {'byte_code': f'{byte_code}', 'data': data}

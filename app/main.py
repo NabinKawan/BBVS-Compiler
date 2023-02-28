@@ -16,14 +16,11 @@ async def root():
     return {"api": api_settings.title}
 
 
-@app.get("/status")
-async def check_blockchain_status():
-    return status_service.test_ping('http://192.168.56.1:5005')
+# @app.get("/status")
+# async def check_blockchain_status():
+#     return status_service.test_ping('http://localhost:5005')
 
 
-@app.post("/bytecode")
-async def generate_bytecode(file: UploadFile):
-    return await compiler_service.generate_bytecode(file)
-# @app.post("/bytecode")
-# def compile(bytecode: str, data_provider: Dict[str, Any]):
-#     return compiler_service.generate_bytecode(code)
+@app.post("/compile")
+async def compile_contract(contract_file: UploadFile, data_file: UploadFile):
+    return await compiler_service.compile_contract(contract_file, data_file)
