@@ -1,0 +1,72 @@
+{
+    "voters": [
+        {
+            "voter_id": "020",
+            "name": "nabin",
+            "voted_to": [],
+            "has_voted": ""
+        },
+        {
+            "voter_id": "30",
+            "name": "shanti",
+            "voted_to": [
+                "12",
+                "15"
+            ],
+            "has_voted": true
+        },
+        {
+            "voter_id": "30",
+            "name": "kiran",
+            "voted_to": [
+                "12",
+                "15"
+            ],
+            "has_voted": true
+        }
+    ],
+    "candidates": [
+        {
+            "candidate_id": "12",
+            "name": "sudeep",
+            "image_url": "jjl",
+            "post": "kkjkj"
+        },
+        {
+            "candidate_id": "15",
+            "name": "biamal",
+            "image_url": "jjl",
+            "post": "aabb"
+        },
+        {
+            "candidate_id": "18",
+            "name": "knkkn",
+            "image_url": "kj",
+            "post": "hjn"
+        },
+        {
+            "candidate_id": "14",
+            "name": "sdf",
+            "image_url": "dsf",
+            "post": "df"
+        },
+        {
+            "candidate_id": "13",
+            "name": "kamal",
+            "image_url": "fdj",
+            "post": "vr"
+        }
+    ],
+    "results": [],
+    "election_name": "local",
+    "total_votes": 1,
+    "votes_count": {
+        "12": 1,
+        "15": 1,
+        "18": 0,
+        "14": 0,
+        "13": 0
+    },
+    "voting_start_time": "2023-03-02 08:47:13.981657",
+    "voting_end_time": "2023-03-02 08:52:13.981657"
+}
