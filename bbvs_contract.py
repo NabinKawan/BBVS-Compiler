@@ -60,6 +60,7 @@ def is_voter_available(voter_id):
         return True
     else:
         print(f"Voter_id: {voter_id} not available")
+        raise Exception(f"Voter_id: {voter_id} not available")
 
 
 def is_candidate_available(candidate_ids):
@@ -79,7 +80,8 @@ def is_candidate_available(candidate_ids):
 
         if status == False:
             print(f"Candidate_id: {cand_id} not available")
-            break
+            raise Exception(f"Candidate_id: {cand_id} not available")
+            # break
 
     if status:
         return True
@@ -97,6 +99,7 @@ def has_already_voted(voter_id):
         return True
     else:
         print("Voter has already voted")
+        raise Exception("Voter has already voted")
 
 
 # check to start election, if candidates and voters are available or not
@@ -107,8 +110,10 @@ def are_members_available():
     else:
         if len(file_data['candidates']) == 0:
             print("Candidates are not available")
+            raise Exception("Candidates are not available")
         elif len(file_data['voters']) == 0:
             print("Voters are not available")
+            raise Exception("Voters are not available")
 
 
 def voting_line_open():
@@ -164,6 +169,7 @@ def initialize_voters(voters):
 
             write_json(voter_detail, 'voters')
 
+
 def reset():
     with open("contract_data.json", 'r+') as file:
         file_data = json.load(file)
@@ -179,7 +185,6 @@ def reset():
         file.truncate(0)
         file.seek(0)
         json.dump(file_data, file, indent=4)
-
 
 
 @click.group()
@@ -228,10 +233,10 @@ def start_election(election):
         print(file_data['election_name'])
         print(voting_start_time)
 
+
     # timestamp = datetime.timestamp(voting_end_time)
     # print("\ntimestamp :", timestamp + 5)
     # print("current : ", datetime.fromtimestamp(timestamp + 5))
-
 
 
 @cli.command()
@@ -245,6 +250,7 @@ def get_remaining_time():
         return remaining_time
     else:
         print("Voting session is closed")
+        raise Exception("Voting session is closed")
 
 
 @cli.command()
@@ -339,6 +345,7 @@ def do_vote(vote):
 def get_results():
     if voting_line_open():
         print("Voting session is going on. Wait !!")
+        raise Exception("Voting session is going on. Wait !!")
     else:
         file_data = load_json()
 

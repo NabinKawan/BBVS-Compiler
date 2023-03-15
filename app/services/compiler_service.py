@@ -39,6 +39,8 @@ class CompilerService:
         data = await blockchain_service.get_contract_data(contract_address)
         write_json_to_file('contract_data.json', data)
         return_value = run_command(exe_params)
+
+        # print("return: ",return_value)
         contract_data = read_json_from_file('contract_data.json')
         tx = {'contract_address': contract_address, 'contract_data': json.dumps(contract_data),
               'inputs': exe_params.command_params.json()}
