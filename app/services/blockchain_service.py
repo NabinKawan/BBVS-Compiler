@@ -17,7 +17,7 @@ class BlockchainService:
         return response.json()
 
     @staticmethod
-    def update_contract(tx):
+    async def update_contract(tx):
         response = requests.post(f'{blockchain_url}/update_contract', data=json.dumps(tx),
                                  headers={'Content-type': 'application/json'})
         return response.json()
