@@ -1,0 +1,28 @@
+# start-election
+{
+  "contract_address": "9ce79d6a7e36ee64ecfb8973dfc58767df92dc7f5923a8a4c5ef047bd76518fc",
+  "command_params": {
+    "command": "start-election",
+    "option_name": "--election",
+    "args": [
+      "local_election",
+"5",
+"[[BBVS13,'Pramod Mahato',1212311.png,ward_member,kjkajkj],[BBVS07,'Pramila karki',localhost,mayor,f944aa0a681b067e7d06]]",
+"[[KCE075BCT010,'Naresh Hada',[],False],[KCE075BCT011,'Neha Suwal',[],True]]",
+"['ward member',mayor]"
+    ]
+  }
+}
+
+# DO-VOTE
+
+{
+  "contract_address": "9ce79d6a7e36ee64ecfb8973dfc58767df92dc7f5923a8a4c5ef047bd76518fc",
+  "command_params": {
+    "command": "do-vote",
+    "option_name": "--vote",
+    "args": [
+      "KCE075BCT010","[BBVS13,BBVS07]"
+    ]
+  }
+}

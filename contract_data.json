@@ -1,72 +1,41 @@
 {
     "voters": [
         {
-            "voter_id": "020",
-            "name": "nabin",
+            "voter_id": "KCE075BCT010",
+            "name": "Naresh Hada",
             "voted_to": [],
-            "has_voted": ""
+            "has_voted": false
         },
         {
-            "voter_id": "30",
-            "name": "shanti",
-            "voted_to": [
-                "12",
-                "15"
-            ],
-            "has_voted": true
-        },
-        {
-            "voter_id": "30",
-            "name": "kiran",
-            "voted_to": [
-                "12",
-                "15"
-            ],
-            "has_voted": true
+            "voter_id": "KCE075BCT011",
+            "name": "Neha Suwal",
+            "voted_to": [],
+            "has_voted": false
         }
     ],
     "candidates": [
         {
-            "candidate_id": "12",
-            "name": "sudeep",
-            "image_url": "jjl",
-            "post": "kkjkj"
+            "candidate_id": "BBVS13",
+            "name": "Pramod Mahato",
+            "image_url": "1212311.png",
+            "post": "ward_member",
+            "logo": "kjkajkj"
         },
         {
-            "candidate_id": "15",
-            "name": "biamal",
-            "image_url": "jjl",
-            "post": "aabb"
-        },
-        {
-            "candidate_id": "18",
-            "name": "knkkn",
-            "image_url": "kj",
-            "post": "hjn"
-        },
-        {
-            "candidate_id": "14",
-            "name": "sdf",
-            "image_url": "dsf",
-            "post": "df"
-        },
-        {
-            "candidate_id": "13",
-            "name": "kamal",
-            "image_url": "fdj",
-            "post": "vr"
+            "candidate_id": "BBVS07",
+            "name": "Pramila karki",
+            "image_url": "localhost",
+            "post": "mayor",
+            "logo": "f944aa0a681b067e7d06"
         }
     ],
     "results": [],
-    "election_name": "local",
-    "total_votes": 1,
+    "total_votes": 0,
     "votes_count": {
-        "12": 1,
-        "15": 1,
-        "18": 0,
-        "14": 0,
-        "13": 0
+        "BBVS13": 0,
+        "BBVS07": 0
     },
-    "voting_start_time": "2023-03-02 08:47:13.981657",
-    "voting_end_time": "2023-03-02 08:52:13.981657"
+    "voting_start_time": "2023-03-15 10:44:10.548915",
+    "voting_end_time": "2023-03-15 10:49:10.548915",
+    "election_name": "_election"
 }

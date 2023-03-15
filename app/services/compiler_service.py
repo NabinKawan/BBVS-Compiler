@@ -23,9 +23,11 @@ class CompilerService:
     async def compile_contract(contract_file, data_file):
         contract_contents = await contract_file.read()
         data_contents = await data_file.read()
+
         data = data_contents.decode()
+        print(json.loads(data))
         clean_data = data.replace('\t', '').replace('\n', '').replace('\r', '')
-        write_json_to_file('contract_data.json', data)
+        write_json_to_file('contract_data.json', json.loads(data))
         byte_code = compile(contract_contents.decode(), 'filename', 'exec').co_code
         tx = {'tx': {'byte_code': str(byte_code), 'contract_data': clean_data}}
         # store to blockchain
@@ -38,7 +40,7 @@ class CompilerService:
         write_json_to_file('contract_data.json', data)
         return_value = run_command(exe_params)
         contract_data = read_json_from_file('contract_data.json')
-        tx = {'contract_address': contract_address, 'contract_data': contract_data}
+        tx = {'contract_address': contract_address, 'contract_data': json.dumps(contract_data),'inputs':exe_params.command_params.json()}
         blockchain_service.update_contract(tx)
         return return_value
 
