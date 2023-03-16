@@ -38,13 +38,16 @@ class CompilerService:
         contract_address = exe_params.contract_address
         data = await blockchain_service.get_contract_data(contract_address)
         write_json_to_file('contract_data.json', data)
+        # clean_exe_params = exe_params.command_params.args.replace('\"', '').replace(' ', '_')
+
         return_value = run_command(exe_params)
 
-        # print("return: ",return_value)
         contract_data = read_json_from_file('contract_data.json')
         tx = {'contract_address': contract_address, 'contract_data': json.dumps(contract_data),
               'inputs': exe_params.command_params.json()}
-        response = await blockchain_service.update_contract(tx)
+        blockchain_response = await blockchain_service.update_contract(tx)
+        response = {'contract_response': return_value.replace('\n', ''), 'blockchain_response': blockchain_response}
+        print("return: ", return_value)
         return response
 
     @staticmethod

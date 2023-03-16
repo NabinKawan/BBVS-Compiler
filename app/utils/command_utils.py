@@ -13,11 +13,11 @@ def run_command(exe_params: ExecuteDto):
             ["python", "bbvs_contract.py", cmd_params.command, cmd_params.option_name,
              *exe_params.command_params.args], stdout=subprocess.PIPE, text=True)
 
-    print("utils: ", val.returncode)
+    print(val.stdout)
 
     if val.returncode:
         print(val.stdout)
-        err = val.stdout.replace("\n","")
+        err = val.stdout.replace("\n", "")
         raise HTTPException(status_code=400, detail=err)
-    return val.returncode
+    return val.stdout
 

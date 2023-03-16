@@ -124,7 +124,8 @@ def voting_line_open():
         return True
     else:
         print("Voting session is closed")
-        return False
+        raise Exception("Voting session is closed")
+        # return False
 
 
 def spliter(str_param):
@@ -294,7 +295,7 @@ def get_voter_list():
 @cli.command()
 def get_voters_count():
     file_data = load_json()
-    voter_list = file_data['voter']
+    voter_list = file_data['voters']
     print(len(voter_list))
     return len(voter_list)
 
@@ -302,9 +303,48 @@ def get_voters_count():
 @cli.command()
 def get_candidates_count():
     file_data = load_json()
-    candidate_list = file_data['candidate']
+    candidate_list = file_data['candidates']
     print(len(candidate_list))
     return len(candidate_list)
+
+
+@cli.command()
+def get_total_votes():
+    file_data = load_json()
+    total_votes = file_data['total_votes']
+    print(total_votes)
+    return total_votes
+
+
+@cli.command()
+def get_election_name():
+    file_data = load_json()
+    election_name = file_data['election_name']
+    print(election_name)
+    return election_name
+
+
+@cli.command()
+@click.option("--voter", help="provide voter_id")
+def get_voter_status(voter):
+    voter_id = voter
+    file_data = load_json()
+    if is_voter_available(voter_id):
+        for i in range(len(file_data['voters'])):
+            if file_data['voters'][i]['voter_id'] == voter_id:
+                print(file_data['voters'][i]['has_voted'])
+                return file_data['voters'][i]['has_voted']
+
+
+@cli.command()
+def get_end_time():
+    file_data = load_json()
+    # end_time = file_data['voting_end_time']
+    date_format = "%Y-%m-%d %H:%M:%S.%f"
+    end_time = datetime.strptime(file_data["voting_end_time"], date_format)
+    timestamp = datetime.timestamp(end_time)
+    print(timestamp)
+    return timestamp
 
 
 @cli.command()
@@ -361,7 +401,7 @@ def get_results():
             }
             print(result)
             write_json(result, "results")
-
+        print(file_data["results"])
         return file_data["results"]
 
 

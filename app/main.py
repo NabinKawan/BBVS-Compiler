@@ -1,4 +1,5 @@
 from fastapi import FastAPI, UploadFile
+from starlette.middleware.cors import CORSMiddleware
 
 from app.dtos.command_dto import CommandDto
 from app.dtos.execute_dto import ExecuteDto
@@ -15,7 +16,13 @@ app = FastAPI()
 compiler_service = CompilerService()
 status_service = StatusService()
 
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 @app.get("/")
 async def root():
     return {"api": api_settings.title}
