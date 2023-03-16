@@ -1,6 +1,7 @@
 import subprocess
 from fastapi import HTTPException
 from app.dtos.execute_dto import ExecuteDto
+from fastapi.responses import JSONResponse
 
 
 def run_command(exe_params: ExecuteDto):
@@ -20,4 +21,3 @@ def run_command(exe_params: ExecuteDto):
         err = val.stdout.replace("\n", "")
         raise HTTPException(status_code=400, detail=err)
     return val.stdout
-

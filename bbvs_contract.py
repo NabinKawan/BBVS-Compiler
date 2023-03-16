@@ -206,7 +206,7 @@ def start_election(election):
     cand_l = list(cand_l)
     # print(cand_l)
     clean_candidates = list(map(cleaner, cand_l))
-    # print(f"clean_candidates: {clean_candidates}")
+    print(f"clean_candidates: {clean_candidates}")
 
     voter_list = voters.split('],[')
     voter_l = map(spliter, voter_list)
@@ -233,7 +233,6 @@ def start_election(election):
 
         print(file_data['election_name'])
         print(voting_start_time)
-
 
     # timestamp = datetime.timestamp(voting_end_time)
     # print("\ntimestamp :", timestamp + 5)
@@ -327,13 +326,17 @@ def get_election_name():
 @cli.command()
 @click.option("--voter", help="provide voter_id")
 def get_voter_status(voter):
-    voter_id = voter
-    file_data = load_json()
-    if is_voter_available(voter_id):
-        for i in range(len(file_data['voters'])):
-            if file_data['voters'][i]['voter_id'] == voter_id:
-                print(file_data['voters'][i]['has_voted'])
-                return file_data['voters'][i]['has_voted']
+    if voting_line_open():
+        voter_id = voter
+        file_data = load_json()
+        if is_voter_available(voter_id):
+            for i in range(len(file_data['voters'])):
+                if file_data['voters'][i]['voter_id'] == voter_id:
+                    voter_status = file_data['voters'][i]['has_voted']
+                    if voter_status:
+                        print(f'Voter {voter_id} already voted')
+                        raise Exception("Voter already voted")
+        return file_data['voters'][i]['has_voted']
 
 
 @cli.command()
@@ -351,6 +354,7 @@ def get_end_time():
 @click.option('--vote', nargs=2, help="provide: voter_id, candidate_ids[]")
 def do_vote(vote):
     voter_id, candidate_ids = vote
+    candidate_ids = candidate_ids.replace('"', "")
     # voting lines open
     # is eligible vote
     if (voting_line_open() and is_voter_available(voter_id) and is_candidate_available(
