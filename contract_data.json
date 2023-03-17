@@ -1,1 +1,58 @@
-{"voters": [{"voter_id": "KCE075BCT010", "name": "Nabin  Kawan", "voted_to": ["BBVS13", "BBVS21", "BBVS18", "BBVS08"], "has_voted": true}, {"voter_id": "KCE075BCT011", "name": "Neha  Suwal", "voted_to": ["BBVS13", "BBVS21", "BBVS18", "BBVS08"], "has_voted": true}, {"voter_id": "KCE075BCT012", "name": "Suman Raj Subedi", "voted_to": ["BBVS13", "BBVS21", "BBVS18", "BBVS08"], "has_voted": true}, {"voter_id": "KCE075BCT013", "name": "Susmita  Khan", "voted_to": ["BBVS13", "BBVS21", "BBVS18", "BBVS08"], "has_voted": true}, {"voter_id": "KCE075BCT014", "name": "Krishna Bahadur Kandel", "voted_to": ["BBVS13", "BBVS21", "BBVS18", "BBVS08"], "has_voted": true}, {"voter_id": "KCE075BCT015", "name": "Rojan  Kunwar", "voted_to": ["BBVS13", "BBVS21", "BBVS18", "BBVS08"], "has_voted": true}, {"voter_id": "KCE075BCT016", "name": "Raman  Shrestha", "voted_to": [], "has_voted": false}, {"voter_id": "KCE075BCT017", "name": "Juhel  Phanju", "voted_to": [], "has_voted": false}], "candidates": [{"candidate_id": "BBVS13", "name": "Pramod  Mahato", "image_url": "http://localhost:5000/static/images/5628fba3e83db789a339.png", "post": "WARD MEMBER", "logo": "http://localhost:5000/static/images/09b84cda6ec2e489f9b0.png"}, {"candidate_id": "BBVS07", "name": "Pramila  Prabhakar", "image_url": "http://localhost:5000/static/images/1d2c821226e0a6824c53.jpg", "post": "WARD MEMBER", "logo": "http://localhost:5000/static/images/e597ebfe51c3495a5c88.png"}, {"candidate_id": "BBVS23", "name": "Pratik  Khanal", "image_url": "http://localhost:5000/static/images/0f122cba056eae6bc701.jpg", "post": "WARD MEMBER", "logo": "http://localhost:5000/static/images/df62607eb939300424b1.png"}, {"candidate_id": "BBVS22", "name": "Prakash  Duwal", "image_url": "http://localhost:5000/static/images/1196aeebda6c69d65202.jpg", "post": "WARD MEMBER", "logo": "http://localhost:5000/static/images/1cc55a812994be227f06.png"}, {"candidate_id": "BBVS21", "name": "Dipesh  Joshi", "image_url": "http://localhost:5000/static/images/9d0b7e58d7097065a3fd.jpg", "post": "WARD CHAIRPERSON", "logo": "http://localhost:5000/static/images/19f088ac9f7191c4f491.png"}, {"candidate_id": "BBVS20", "name": "Krishna Bhakta Prajapati", "image_url": "http://localhost:5000/static/images/45d1eec2933b3b2f5479.jpg", "post": "WARD CHAIRPERSON", "logo": "http://localhost:5000/static/images/c8bff779251917241021.png"}, {"candidate_id": "BBVS09", "name": "Shanti  Thapa", "image_url": "http://localhost:5000/static/images/0a06fd71f748bb1a7206.jpg", "post": "WARD CHAIRPERSON", "logo": "http://localhost:5000/static/images/7ef5b6f69b5715691328.png"}, {"candidate_id": "BBVS18", "name": "Om Prakash Suwal", "image_url": "http://localhost:5000/static/images/6698e03c2bb25ad9e753.jpg", "post": "DEPUTY MAYOR", "logo": "http://localhost:5000/static/images/588e4dfdbbf3d653499d.png"}, {"candidate_id": "BBVS17", "name": "Shambu Prasad Thapa", "image_url": "http://localhost:5000/static/images/ec2dc7bd6244a63e8a04.jpg", "post": "DEPUTY MAYOR", "logo": "http://localhost:5000/static/images/243ab738af3bd36f6e09.png"}, {"candidate_id": "BBVS01", "name": "Sita   Neupane", "image_url": "http://localhost:5000/static/images/e799ff26c59472f542b8.jpg", "post": "DEPUTY MAYOR", "logo": "http://localhost:5000/static/images/6754d7fe83a0edf4fcdf.png"}, {"candidate_id": "BBVS08", "name": "Sharmila  Joshi", "image_url": "http://localhost:5000/static/images/1a40c8e310772008591c.jpg", "post": "MAYOR", "logo": "http://localhost:5000/static/images/85a770c750457287665d.png"}, {"candidate_id": "BBVS16", "name": "Kamal  Dhungel", "image_url": "http://localhost:5000/static/images/af74403ba48bc3d74d2e.jpg", "post": "MAYOR", "logo": "http://localhost:5000/static/images/fa62bed94e19d298d7db.png"}, {"candidate_id": "BBVS14", "name": "Krishna Ram Bhadel", "image_url": "http://localhost:5000/static/images/f648fc420db67cb24999.jpg", "post": "MAYOR", "logo": "http://localhost:5000/static/images/b52f69278a99301fa9a0.png"}, {"candidate_id": "BBVS15", "name": "Ganesh Ram Shrestha", "image_url": "http://localhost:5000/static/images/e10bbf8475c2322cc403.jpg", "post": "MAYOR", "logo": "http://localhost:5000/static/images/582b26e2b725f1a12a50.png"}, {"candidate_id": "BBVS05", "name": "Shristi  Shakya", "image_url": "http://localhost:5000/static/images/a02a3ec16cf59a596b2b.jpg", "post": "WARD CHAIRPERSON", "logo": "http://localhost:5000/static/images/d2050ec0b991532b4616.png"}, {"candidate_id": "BBVS12", "name": "Shamir  Shrestha", "image_url": "http://localhost:5000/static/images/c4563963c1423b2e585b.jpg", "post": "WARD CHAIRPERSON", "logo": "http://localhost:5000/static/images/0721827f4e40a6af3ea7.png"}, {"candidate_id": "BBVS11", "name": "Shyam  Khatri", "image_url": "http://localhost:5000/static/images/94c8a9cf52e50d03f389.jpg", "post": "DEPUTY MAYOR", "logo": "http://localhost:5000/static/images/b5b14ef9d8940943276d.png"}, {"candidate_id": "BBVS10", "name": "Ram   Adhikari", "image_url": "http://localhost:5000/static/images/fff4f6e39c401c0c8818.jpg", "post": "MAYOR", "logo": "http://localhost:5000/static/images/733f9b3562ccb936813f.png"}, {"candidate_id": "BBVS04", "name": "Smriti  Dhungana", "image_url": "http://localhost:5000/static/images/ecdc4a793dd2ffe89854.jpg", "post": "WARD MEMBER", "logo": "http://localhost:5000/static/images/c4f20d455281b9631eec.png"}, {"candidate_id": "BBVS03", "name": "Samaira  Bhandari", "image_url": "http://localhost:5000/static/images/1e80922093a89022c910.jpg", "post": "WARD MEMBER", "logo": "http://localhost:5000/static/images/b3613179a33aae7e5056.png"}, {"candidate_id": "BBVS02", "name": "Priya  Sharma", "image_url": "http://localhost:5000/static/images/aa2685ee97500ad4a075.jpg", "post": "DEPUTY MAYOR", "logo": "http://localhost:5000/static/images/8c33e87f8315daccca4c.png"}], "results": [], "total_votes": 6, "votes_count": {"BBVS13": 6, "BBVS07": 0, "BBVS23": 0, "BBVS22": 0, "BBVS21": 6, "BBVS20": 0, "BBVS09": 0, "BBVS18": 6, "BBVS17": 0, "BBVS01": 0, "BBVS08": 6, "BBVS16": 0, "BBVS14": 0, "BBVS15": 0, "BBVS05": 0, "BBVS12": 0, "BBVS11": 0, "BBVS10": 0, "BBVS04": 0, "BBVS03": 0, "BBVS02": 0}, "voting_start_time": "2023-03-16 22:16:32.854964", "voting_end_time": "2023-03-16 22:21:32.854964", "election_name": "Class Eelction"}
+{
+    "voters": [
+        {
+            "voter_id": "KCE075BCT010",
+            "name": "Naresh Hada",
+            "voted_to": [],
+            "has_voted": false
+        },
+        {
+            "voter_id": "KCE075BCT011",
+            "name": "Neha Suwal",
+            "voted_to": [],
+            "has_voted": false
+        }
+    ],
+    "candidates": [
+        {
+            "candidate_id": "BBVS13",
+            "name": "Pramod Mahato",
+            "image_url": "1212311.png",
+            "post": "ward_member",
+            "logo": "kjkajkj"
+        },
+        {
+            "candidate_id": "BBVS07",
+            "name": "Pramila karki",
+            "image_url": "localhost",
+            "post": "mayor",
+            "logo": "f944aa0a681b067e7d06"
+        }
+    ],
+    "results": [
+        {
+            "name": "Pramod Mahato",
+            "candidate_id": "BBVS13",
+            "image_url": "1212311.png",
+            "post": "ward_member",
+            "votecount": 0,
+            "logo": "kjkajkj"
+        },
+        {
+            "name": "Pramila karki",
+            "candidate_id": "BBVS07",
+            "image_url": "localhost",
+            "post": "mayor",
+            "votecount": 0,
+            "logo": "f944aa0a681b067e7d06"
+        }
+    ],
+    "total_votes": 0,
+    "votes_count": {
+        "BBVS13": 0,
+        "BBVS07": 0
+    },
+    "voting_start_time": "2023-03-16 23:55:18.457710",
+    "voting_end_time": "2023-03-16 23:56:18.457710",
+    "election_name": "local_election"
+}

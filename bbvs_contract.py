@@ -128,6 +128,17 @@ def voting_line_open():
         # return False
 
 
+def voting_line_close():
+    file_data = load_json()
+    date_format = "%Y-%m-%d %H:%M:%S.%f"
+    voting_end_time = datetime.strptime(file_data["voting_end_time"], date_format)
+    if datetime.now() > voting_end_time:
+        # print("Voting session is closed")
+        return True
+    else:
+        return False
+
+
 def spliter(str_param):
     return str_param.split(",")
 
@@ -245,7 +256,7 @@ def get_remaining_time():
     date_format = "%Y-%m-%d %H:%M:%S.%f"
     # datetime_obj = datetime.strptime(file_data["voting_end_time"], date_format)
     remaining_time = datetime.strptime(file_data["voting_end_time"], date_format) - datetime.now()
-    if (remaining_time.days >= 0):
+    if remaining_time.days >= 0:
         print(remaining_time)
         return remaining_time
     else:
@@ -387,11 +398,13 @@ def do_vote(vote):
 
 @cli.command()
 def get_results():
-    if voting_line_open():
-        print("Voting session is going on. Wait !!")
-        raise Exception("Voting session is going on. Wait !!")
-    else:
-        file_data = load_json()
+    if voting_line_close():
+        with open("contract_data.json", 'r+') as file:
+            file_data = json.load(file)
+            file_data["results"].clear()
+            file.truncate(0)
+            file.seek(0)
+            json.dump(file_data, file, indent=4)
 
         for i in range(len(file_data["candidates"])):
             cand_id = file_data["candidates"][i]["candidate_id"]
@@ -403,10 +416,15 @@ def get_results():
                 "votecount": file_data["votes_count"][cand_id],
                 "logo": file_data["candidates"][i]["logo"]
             }
-            print(result)
+            # print(result)
             write_json(result, "results")
+
+        file_data = load_json()
         print(file_data["results"])
         return file_data["results"]
+    else:
+        print("Voting session is going on. Wait !!")
+        raise Exception("Voting session is going on. Wait !!")
 
 
 cli()
