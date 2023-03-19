@@ -21,8 +21,7 @@ class APISettings(BaseSettings):
 
 
 class BlockchainSettings(BaseSettings):
-    host: str = "localhost"
-    port: int = 5005
+    url: str = 'http:localhost:5005'
     name: str = 'Khwopa Blockchain'
 
     class Config(BaseSettings.Config):

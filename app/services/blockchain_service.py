@@ -5,7 +5,7 @@ from app.settings import configs
 
 blockchain_settings = configs.blockchain_settings
 
-blockchain_url = f'http://{blockchain_settings.host}:{blockchain_settings.port}'
+blockchain_url = blockchain_settings.url
 
 
 class BlockchainService:
