@@ -14,7 +14,7 @@ from app.utils.file_utils import write_json_to_file, read_json_from_file
 blockchain_service = BlockchainService()
 blockchain_settings = configs.blockchain_settings
 
-blockchain_url = f'http://{blockchain_settings.host}:{blockchain_settings.port}'
+blockchain_url = blockchain_settings.url
 
 
 class CompilerService:
@@ -25,7 +25,6 @@ class CompilerService:
         data_contents = await data_file.read()
 
         data = data_contents.decode()
-        print(json.loads(data))
         clean_data = data.replace('\t', '').replace('\n', '').replace('\r', '')
         write_json_to_file('contract_data.json', json.loads(data))
         byte_code = compile(contract_contents.decode(), 'filename', 'exec').co_code
@@ -47,7 +46,6 @@ class CompilerService:
               'inputs': exe_params.command_params.json()}
         blockchain_response = await blockchain_service.update_contract(tx)
         response = {'contract_response': return_value.replace('\n', ''), 'blockchain_response': blockchain_response}
-        print("return: ", return_value)
         return response
 
     @staticmethod
