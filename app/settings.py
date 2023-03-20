@@ -21,7 +21,7 @@ class APISettings(BaseSettings):
 
 
 class BlockchainSettings(BaseSettings):
-    url: str = 'http:localhost:5005'
+    url: str = 'https://satyatathya.sireto.dev'
     name: str = 'Khwopa Blockchain'
 
     class Config(BaseSettings.Config):
